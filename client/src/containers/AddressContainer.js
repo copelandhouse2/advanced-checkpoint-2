@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import Address from "../components/Address";
-import { getContact } from "../actions";
+import { getAddress } from "../actions";
 
 function mapStateToProps(state) {
   return {
-    contact: state.address
+    address: state.address
   };
 }
 

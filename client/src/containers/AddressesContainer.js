@@ -3,8 +3,14 @@ import Addresses from "../components/Addresses";
 
 function mapStateToProps(state) {
   return {
-    contacts: state.addresses
+    addresses: state.addresses
   };
 }
+
+// function mapDispatchToProps(dispatch) {
+//   return {
+//
+//   };
+// }
 
 export default connect(mapStateToProps)(Addresses);
