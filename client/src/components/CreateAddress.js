@@ -21,64 +21,80 @@ class CreateAddress extends Component {
   render() {
     return (
       <div>
-        <h2>Project Address</h2>
-        <form onSubmit={(e) => {
+        <h2 className="white">Add an Address</h2>
+        <form className="container-fluid" onSubmit={(e) => {
           e.preventDefault();
           if (this.props.createAddress) {
             this.props.createAddress(this.state);
           }
         }}>
-          <div>
-            Job #: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">Job #</div>
+            <input onChange={(e) => {
               this.setState({
                 jobNumber: e.target.value
               });
             }} />
           </div>
-          <div>
-            Address 1: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">Address 1</div>
+            <input onChange={(e) => {
               this.setState({
                 address1: e.target.value
               });
             }} />
           </div>
-          <div>
-            Address 2: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">Address 2</div>
+            <input onChange={(e) => {
               this.setState({
                 address2: e.target.value
               });
             }} />
           </div>
-          <div>
-            City: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">City</div>
+            <input onChange={(e) => {
               this.setState({
                 city: e.target.value
               });
             }} />
           </div>
-          <div>
-            Subdivision: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">Subdivision</div>
+            <input onChange={(e) => {
               this.setState({
                 subdivision: e.target.value
               });
             }} />
           </div>
-          <div>
-            PI: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">PI</div>
+            <input onChange={(e) => {
               this.setState({
                 PI: e.target.value
               });
             }} />
           </div>
-          <div>
-            Client: <input onChange={(e) => {
+
+          <div className="row">
+            <div className="white col-md-1">Client</div>
+            <input onChange={(e) => {
               this.setState({
                 client: e.target.value
               });
             }} />
           </div>
+          
           <button>Create</button>
         </form>
+
       </div>
     );
   }

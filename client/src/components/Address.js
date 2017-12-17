@@ -13,9 +13,10 @@ class Address extends Component {
     return (
       <div>
         <h2>{this.props.address.address1}</h2>
+        <div>{this.props.address.jobNumber}</div>
         <div>{this.props.address.subdivision} {this.props.address.city}</div>
         <div>{this.props.address.client}</div>
-        <div>{this.props.address.pi}</div>
+        <div>{this.props.address.PI}</div>
       </div>
     );
   }

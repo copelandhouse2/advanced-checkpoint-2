@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-// import Main from "./components/Main";
+import Main from "./components/Main";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
-// import AddressContainer from "./containers/AddressContainer";
+import AddressContainer from "./containers/AddressContainer";
 import AddressesContainer from "./containers/AddressesContainer";
 import CreateAddressContainer from "./containers/CreateAddressContainer";
 
@@ -14,15 +14,20 @@ class App extends Component {
   }
   componentDidMount() {
     this.props.loadAddresses();
-    
+
   }
 
   render() {
     return (
-      <div>
-        <AddressesContainer />
-        <CreateAddressContainer />
-      </div>
+      <BrowserRouter>
+        <div id="gradient" >
+          <Switch>
+            <Route path="/addresses/:id" component={AddressContainer} />
+            <Route path="/" component={Main} />
+          </Switch>
+        </div>
+
+      </BrowserRouter>
     );
   }
 
