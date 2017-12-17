@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import Addresses from "../components/Addresses";
+import { deleteAddress } from "../actions";
 
 function mapStateToProps(state) {
   return {
@@ -7,10 +8,12 @@ function mapStateToProps(state) {
   };
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//
-//   };
-// }
+function mapDispatchToProps(dispatch) {
+  return {
+    deleteAddress: function (id) {
+      dispatch(deleteAddress(id));
+    }
+  };
+}
 
-export default connect(mapStateToProps)(Addresses);
+export default connect(mapStateToProps,mapDispatchToProps)(Addresses);

@@ -25,7 +25,13 @@ function Addresses(props) {
         {addr.client}<br></br>
       <div className="row button-section">
           <button className="col-md-offset-1 col-md-3">Edit</button>
-          <button className="col-md-offset-3 col-md-3">Delete</button>
+          <button className="col-md-offset-3 col-md-3"
+            onClick={(e) => {
+            e.preventDefault();
+            if (props.deleteAddress) {
+              props.deleteAddress(addr._id);
+            }}}
+          > Delete </button>
         </div>
       </address>
     </div>
@@ -40,9 +46,3 @@ function Addresses(props) {
   );
 }
 export default Addresses;
-
-// <CollapsableMapper data={props.addresses} path="addresses" field="Address" field1="Subdivision" field2="Client" field3="PI" />
-
-// <form className="card" key={id}>
-//   <h3>{addr.jobNumber} - {addr.address1} - {addr.subdivision}</h3>
-// </form>

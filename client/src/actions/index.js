@@ -44,3 +44,12 @@ function getAddressDone(address) {
     value: address
   };
 }
+
+// Action to create the Address
+export function deleteAddress(id) {
+  return function (dispatch) {
+    fetch(`/addresses/${id}`, {
+      method: "DELETE"
+    }).then(() => dispatch(loadAddresses()));
+  };
+}
