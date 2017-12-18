@@ -1,39 +1,50 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Address(props) {
+// Tested between function and class.
+// Function was called multiple times and as such the database call was repeated over and over
+// Reverted it back to class.
 
-  const addressId = props.match.params.id;
-  props.getAddress(addressId);
-  let { jobNumber, address1, address2, subdivision, city, PI, client } = props.address;
+class Address extends Component {
 
-  return (
-    <div className="container">
-      <address className="big-card">
-        <p className="text-uppercase text-center card-title">{address1}</p>
+  componentDidMount() {
+    const addressId = this.props.match.params.id;
+    this.props.getAddress(addressId);
+  }
 
-        <div>
-          <span className="col-md-3">Job#:</span>
-          {jobNumber}
-        </div>
+  render() {
+    let { jobNumber, address1, address2, subdivision, city, PI, client } = this.props.address;
 
-        <div>
-          <span className="col-md-3">Sub, City:</span>
-          {subdivision}, {city}
-        </div>
+    return (
+      <div className="container">
+        <h2 className="white">Details</h2>
 
-        <div>
-          <span className="col-md-3">Client:</span>
-          {client}
-        </div>
+        <address className="big-card">
+          <p className="text-uppercase text-center card-title">{address1}</p>
 
-        <div>
-          <span className="col-md-3">PI:</span>
-          {PI}
-        </div>
+          <div>
+            <span className="col-md-3">Job#:</span>
+            {jobNumber}
+          </div>
 
-      </address>
-    </div>
+          <div>
+            <span className="col-md-3">Sub, City:</span>
+            {subdivision}, {city}
+          </div>
 
-  );
+          <div>
+            <span className="col-md-3">Client:</span>
+            {client}
+          </div>
+
+          <div>
+            <span className="col-md-3">PI:</span>
+            {PI}
+          </div>
+
+        </address>
+      </div>
+    );
+
+  }
 }
 export default Address;

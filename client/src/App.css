@@ -40,7 +40,7 @@
 }
 
 .big-card {
-  margin-top: 100px;
+  margin-top: 20px;
   padding: 10px;
   background-color: #BBBBBB;
   width: 700px;
@@ -50,7 +50,9 @@
 }
 
 .button-section {
-  margin: 5px 5px 5px 15px;
+  margin: 5px 5px 5px 15px;  /* use this if Edit button is present */
+  margin: 5px 5px 5px 0px;
+
 }
 
 .details {
@@ -60,4 +62,16 @@
 
 .card-title {
   font-weight: bold;
+}
+
+.links {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: italic;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 200px
+
 }

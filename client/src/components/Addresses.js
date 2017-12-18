@@ -25,8 +25,7 @@ function Addresses(props) {
         {addr.jobNumber}<br></br>
         {addr.client}<br></br>
       <div className="row button-section">
-          <button className="col-md-offset-1 col-md-3">Edit</button>
-          <button className="col-md-offset-3 col-md-3"
+          <button className=""
             onClick={(e) => {
             e.preventDefault();
             if (props.deleteAddress) {
@@ -51,3 +50,6 @@ export default Addresses;
 Addresses.propTypes = {
   addresses: PropTypes.array.isRequired
 }
+
+
+// <button className="col-md-offset-1 col-md-3">Edit</button>
