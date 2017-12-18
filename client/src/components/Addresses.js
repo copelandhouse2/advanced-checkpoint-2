@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import PropTypes from "prop-types";
 
 function Addresses(props) {
 
@@ -19,7 +20,7 @@ function Addresses(props) {
       <address className="card text-center" key={id}>
         <div className="row no-margin-left">
           <strong className="col-md-9 text-uppercase">{addr.address1}</strong>
-          <strong className="col-md-3"><Link to= {`/addresses/${addr._id}`}> details </Link></strong><br></br>
+          <strong className="col-md-3"><Link to={`/addresses/${addr._id}`}> details </Link></strong><br></br>
         </div>
         {addr.jobNumber}<br></br>
         {addr.client}<br></br>
@@ -46,3 +47,7 @@ function Addresses(props) {
   );
 }
 export default Addresses;
+
+Addresses.propTypes = {
+  addresses: PropTypes.array.isRequired
+}

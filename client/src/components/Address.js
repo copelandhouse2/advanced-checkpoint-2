@@ -1,28 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Address extends Component {
+function Address(props) {
 
-  componentDidMount() {
-    const addressId = this.props.match.params.id;
-    this.props.getAddress(addressId);
-  }
+  const addressId = props.match.params.id;
+  props.getAddress(addressId);
+  let { jobNumber, address1, address2, subdivision, city, PI, client } = props.address;
 
-  render() {
-    let address = this.props;
+  return (
+    <div className="container">
+      <address className="big-card">
+        <p className="text-uppercase text-center card-title">{address1}</p>
 
-    return (
-      <div>
-        <h2>{this.props.address.address1}</h2>
-        <div>{this.props.address.jobNumber}</div>
-        <div>{this.props.address.subdivision} {this.props.address.city}</div>
-        <div>{this.props.address.client}</div>
-        <div>{this.props.address.PI}</div>
-      </div>
-    );
-  }
+        <div>
+          <span className="col-md-3">Job#:</span>
+          {jobNumber}
+        </div>
+
+        <div>
+          <span className="col-md-3">Sub, City:</span>
+          {subdivision}, {city}
+        </div>
+
+        <div>
+          <span className="col-md-3">Client:</span>
+          {client}
+        </div>
+
+        <div>
+          <span className="col-md-3">PI:</span>
+          {PI}
+        </div>
+
+      </address>
+    </div>
+
+  );
 }
 export default Address;
-
-// Contact.propTypes = {
-//   contact: PropTypes.object.isRequired
-// }

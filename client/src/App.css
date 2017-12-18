@@ -39,6 +39,16 @@
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
 }
 
+.big-card {
+  margin-top: 100px;
+  padding: 10px;
+  background-color: #BBBBBB;
+  width: 700px;
+  border: 10px solid #999999;
+  box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, .5);
+  font-size: 20pt;
+}
+
 .button-section {
   margin: 5px 5px 5px 15px;
 }
@@ -46,4 +56,8 @@
 .details {
   /* padding-left: 10px; */
   text-align: right;
+}
+
+.card-title {
+  font-weight: bold;
 }

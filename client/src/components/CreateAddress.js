@@ -39,19 +39,10 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">Address 1</div>
+            <div className="white col-md-1">Address</div>
             <input onChange={(e) => {
               this.setState({
                 address1: e.target.value
-              });
-            }} />
-          </div>
-
-          <div className="row">
-            <div className="white col-md-1">Address 2</div>
-            <input onChange={(e) => {
-              this.setState({
-                address2: e.target.value
               });
             }} />
           </div>
@@ -91,7 +82,7 @@ class CreateAddress extends Component {
               });
             }} />
           </div>
-          
+
           <button>Create</button>
         </form>
 
@@ -101,3 +92,12 @@ class CreateAddress extends Component {
 
 }
 export default (CreateAddress);
+
+// <div className="row">
+//   <div className="white col-md-1">Address 2</div>
+//   <input onChange={(e) => {
+//     this.setState({
+//       address2: e.target.value
+//     });
+//   }} />
+// </div>
