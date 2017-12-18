@@ -30,7 +30,7 @@ class CreateAddress extends Component {
         }}>
 
           <div className="row">
-            <div className="white col-md-1">Job #</div>
+            <div className="white col-md-2">Job #</div>
             <input onChange={(e) => {
               this.setState({
                 jobNumber: e.target.value
@@ -39,7 +39,7 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">Address</div>
+            <div className="white col-md-2">Address</div>
             <input onChange={(e) => {
               this.setState({
                 address1: e.target.value
@@ -48,7 +48,7 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">City</div>
+            <div className="white col-md-2">City</div>
             <input onChange={(e) => {
               this.setState({
                 city: e.target.value
@@ -57,7 +57,7 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">Subdivision</div>
+            <div className="white col-md-2">Subdivision</div>
             <input onChange={(e) => {
               this.setState({
                 subdivision: e.target.value
@@ -66,7 +66,7 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">PI</div>
+            <div className="white col-md-2">PI</div>
             <input onChange={(e) => {
               this.setState({
                 PI: e.target.value
@@ -75,7 +75,7 @@ class CreateAddress extends Component {
           </div>
 
           <div className="row">
-            <div className="white col-md-1">Client</div>
+            <div className="white col-md-2">Client</div>
             <input onChange={(e) => {
               this.setState({
                 client: e.target.value

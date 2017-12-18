@@ -11,11 +11,11 @@ function Main() {
   return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4">
-            <AddressesContainer />
-          </div>
-          <div className="col-md-8">
+          <div className="col-md-3">
             <CreateAddressContainer />
+          </div>
+          <div className="col-md-6">
+            <AddressesContainer />
           </div>
         </div>
       </div>
