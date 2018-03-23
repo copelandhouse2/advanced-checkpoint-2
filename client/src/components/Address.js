@@ -12,7 +12,7 @@ class Address extends Component {
   }
 
   render() {
-    let { jobNumber, address1, address2, subdivision, city, PI, client } = this.props.address;
+    let { jobNumber, address1, subdivision, city, PI, client } = this.props.address;
 
     return (
       <div className="container">
