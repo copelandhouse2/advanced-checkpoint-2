@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 
 mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/checkpoint2");
+mongoose.connect("mongodb://public:public@ds257858.mlab.com:57858/checkpoint2");
 
 const app = express();
 app.use(bodyParser.json());
